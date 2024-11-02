@@ -1,0 +1,11 @@
+1.multiplication
+2.subtraction
+3.addition
+4.division
+->1
+1.show multiplication list
+2.practice
+->->1
+_x_ -> _x_
+->->2
+_x_ -> _x_
