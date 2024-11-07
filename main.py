@@ -33,13 +33,21 @@ class menu():
                 self.__ins("division")
         
     def __ins(self,text):
-        print(f"1.show {text} list\n2.practice")
-        a = input(": ")
-        if a == "2":
-            jumlahSoal = int(input("masukkan jumlah soal: "))
-            ui = UserInterface(self.op)
-            ui.mainInThisClass()
-            ui.generatePrablem(jumlahSoal)
+        ui = UserInterface(self.op)
+        while True:
+            os.system("cls")
+            print(f"1.show {text} list\n2.practice")
+            a = input(": ")
+            if a == "2":
+                jumlahSoal = int(input("masukkan jumlah soal: "))
+                ui.mainInThisClass()
+                ui.generatePrablem(jumlahSoal)
+            elif a == "1":
+                ui.mainInThisClass()
+                ui.Show()
+            cek = input("y/n: ")
+            if cek == "y":
+                break
                  
 
 main = menu()

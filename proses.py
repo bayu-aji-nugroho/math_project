@@ -22,8 +22,6 @@ class Proses():
                 self.set.append([i,n])
                 n += 1
                 if n == 10:
-                    print("dipanggil")
-                    print(n)
                     n = 0
                     break
                 if data[1] in self.set:
@@ -101,4 +99,22 @@ class UserInterface(Proses):
         os.system("cls")
         print("kamu menang!")
         print(f"score kamu: {self.point}")
+        
+    def Show(self):
+        for i,data in enumerate(self.set):
+            if i % 8 == 0:
+                print("")
+            match self.operation:
+                case "+":
+                    print(f"{data[0]} {self.operation} {data[1]} = {data[0] + data[1]}\t|", end="")
+                case "-":
+                    print(f"{data[0]} {self.operation} {data[1]} = {data[0] - data[1]}\t|", end="")
+                case "*":
+                    print(f"{data[0]} {self.operation} {data[1]} = {data[0] * data[1]}\t|", end="")
+                case "/":
+                    print(f"{data[0]} {self.operation} {data[1]} = {data[0] / data[1]}\t|", end="")
+                case _:
+                    print("error")
+            
+               
                 
